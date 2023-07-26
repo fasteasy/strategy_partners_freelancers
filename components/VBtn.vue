@@ -75,6 +75,7 @@ export default {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   font-family: var(--font-special);
 }
 
@@ -87,7 +88,9 @@ export default {
 }
 
 .button--view-primary {
-
+  color: #fff;
+  font-weight: 300;
+  background: linear-gradient(#0EBDAD, #19A0FA);
 }
 
 .button--view-outline {

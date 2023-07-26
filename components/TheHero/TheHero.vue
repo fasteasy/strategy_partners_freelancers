@@ -5,15 +5,11 @@
         Root / Here
       </div>
       <div class="hero__heading">
-        <h1 class="hero__title">
+        <h1 class="text--title hero__title">
           Мы приглашаем вас принять участие в&nbsp;уникальных проектах Strategy Partners
         </h1>
-
+        <v-btn>Регистрация</v-btn>
       </div>
     </v-container>
   </section>
 </template>
-
-<style scoped>
-
-</style>

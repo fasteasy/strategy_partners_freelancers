@@ -1,0 +1,12 @@
+:root {
+  --font-normal: 'Idealist Sans';
+  --font-special: 'MADE Evolve Sans';
+  --text-size-lead: 24px;
+  @include at-mobile {
+    --text-size-lead: 18px;
+  }
+}
+
+.hero__heading {
+  max-width: 634px;
+}
