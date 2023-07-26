@@ -39,12 +39,12 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    ['nuxt-viewport', {
-      breakpoints: {
-        mobile: 320,
-        desktop: 1366
-      }
-    }]
+    // ['nuxt-viewport', {
+    //   breakpoints: {
+    //     mobile: 320,
+    //     desktop: 1366
+    //   }
+    // }]
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

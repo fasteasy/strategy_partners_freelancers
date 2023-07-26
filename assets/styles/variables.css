@@ -1,6 +1,13 @@
-@custom-media --mobile (max-width: 1024px);
-@custom-media --desktop-wide (min-width: 1366px);
+@custom-media --desktop (min-width: 1366px);
+@custom-media --mobile (max-width: 1365px);
 
 :root {
-  --side-gap: 20px
+  --container-side: auto;
+  --container-width: auto;
+  @media (--desktop) {
+    --container-width: 1296px;
+  }
+  @media (--mobile) {
+    --container-side: 20px;
+  }
 }

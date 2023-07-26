@@ -8,8 +8,8 @@
 export default {
   computed: {
     classList () {
-      const size = this.$viewport.match('desktop') ? 'desktop' : 'mobile'
-      return `container--${size}`
+      // const size = this.$viewport.match('desktop') ? 'desktop' : 'mobile'
+      // return `container--${size}`
     }
   }
 }
@@ -19,9 +19,12 @@ export default {
 .container {
   height: 20px;
   background: green;
+  width: var(--container-width);
+  margin-left: var(--container-side);
+  margin-right: var(--container-side);
 }
 
-.container--mobile {
+/* .container--mobile {
   margin-right: var(--side-gap);
   margin-left: var(--side-gap);
 }
@@ -30,5 +33,5 @@ export default {
   margin-left: auto;
   margin-right: auto;
   width: 1294px;
-}
+} */
 </style>
