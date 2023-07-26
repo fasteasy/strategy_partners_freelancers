@@ -16,9 +16,10 @@ export const VIEW_PRIMARY = 'primary'
 export const VIEW_OUTLINE = 'outline'
 
 export const SIZE_MD = 'md'
+export const SIZE_LG = 'lg'
 
 const views = { VIEW_PRIMARY, VIEW_OUTLINE }
-const sizes = { SIZE_MD }
+const sizes = { SIZE_MD, SIZE_LG }
 
 export default {
   props: {
@@ -77,14 +78,20 @@ export default {
   justify-content: center;
   cursor: pointer;
   font-family: var(--font-special);
+  padding: 0 20px;
+  min-width: 150px;
+  font-size: 18px;
+  line-height: 1em;
 }
 
 .button--size-md {
+  height: 40px;
+  border-radius: 20px;
+}
+
+.button--size-lg {
   height: 60px;
-  font-size: 18px;
   border-radius: 30px;
-  min-width: 150px;
-  padding: 0 20px;
 }
 
 .button--view-primary {

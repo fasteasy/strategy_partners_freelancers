@@ -4,10 +4,17 @@
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .container {
-  width: var(--container-width);
-  margin-left: var(--container-side);
-  margin-right: var(--container-side);
+  @include at-mobile {
+    margin-left: var(--gap);
+    margin-right: var(--gap);
+  }
+  @include at-desktop {
+    width: 1296px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
 }
 </style>
