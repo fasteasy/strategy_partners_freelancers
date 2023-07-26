@@ -1,0 +1,12 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-size: calc(var(--module) * 4);
+
+  @media (--mobile) {
+    background: #eee;
+  }
+
+  @media (--desktop) {
+    background: #ccc;
+  }
+}
