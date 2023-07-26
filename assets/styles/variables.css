@@ -4,10 +4,14 @@
 :root {
   --container-side: auto;
   --container-width: auto;
+  --font-normal: 'Idealist Sans';
+  --font-special: 'MADE Evolve Sans';
+  --text-size-lead: 24px;
   @media (--desktop) {
     --container-width: 1296px;
   }
   @media (--mobile) {
+    --text-size-lead: 18px;
     --container-side: 20px;
   }
 }

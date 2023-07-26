@@ -1,37 +1,13 @@
 <template>
-  <div class="container" :class="classList">
+  <div class="container">
     <slot></slot>
   </div>
 </template>
 
-<script>
-export default {
-  computed: {
-    classList () {
-      // const size = this.$viewport.match('desktop') ? 'desktop' : 'mobile'
-      // return `container--${size}`
-    }
-  }
-}
-</script>
-
 <style scoped>
 .container {
-  height: 20px;
-  background: green;
   width: var(--container-width);
   margin-left: var(--container-side);
   margin-right: var(--container-side);
 }
-
-/* .container--mobile {
-  margin-right: var(--side-gap);
-  margin-left: var(--side-gap);
-}
-
-.container--desktop {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1294px;
-} */
 </style>
