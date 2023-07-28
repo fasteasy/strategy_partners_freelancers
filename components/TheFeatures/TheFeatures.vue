@@ -5,6 +5,15 @@
         Почему нас выбирают
       </h2>
       <the-features-list :items="items" />
+
+      <div class="features__footer">
+        <h3 class="features__footer-title">
+          Присоединяйтесь к&nbsp;программе Strategy Experts!
+        </h3>
+        <div class="features__footer-button">
+          <v-btn view="outline" block>Регистрация</v-btn>
+        </div>
+      </div>
     </v-container>
   </section>
 </template>
@@ -72,10 +81,24 @@ export default {
     padding: 80px 0;
   }
 }
-
 .features__title {
   @include at-desktop {
     margin-bottom: 80px;
   }
+}
+.features__footer {
+  margin: 80px;
+  text-align: center
+}
+.features__footer-title {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.features__footer-button {
+  margin-top: 30px;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
