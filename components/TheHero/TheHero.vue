@@ -1,9 +1,9 @@
 <template>
   <section class="hero">
     <v-container>
-      <div class="hero__nav">
+      <bread-crumbs class="hero__nav">
         Root / Here
-      </div>
+      </bread-crumbs>
       <div class="hero__heading">
         <h1 class="text--title hero__title">
           Мы приглашаем вас принять участие в&nbsp;уникальных проектах Strategy Partners
@@ -13,3 +13,15 @@
     </v-container>
   </section>
 </template>
+
+<style scoped lang="scss">
+.hero {
+  background: #eee;
+}
+.hero__heading {
+  max-width: 634px;
+  @media (--mobile) {
+    color: orange
+  }
+}
+</style>
