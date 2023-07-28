@@ -5,6 +5,6 @@
     <v-divider />
     <the-features id="features" />
     <v-divider />
-    <br><br><br><br><br>
+    <the-selection id="selection" />
   </div>
 </template>
