@@ -1,8 +1,8 @@
 <template>
   <div>
-    <the-hero />
-    <the-preface />
+    <the-hero id="hero" />
+    <the-preface id="preface" />
     <v-divider />
-    <the-features />
+    <the-features id="features" />
   </div>
 </template>
