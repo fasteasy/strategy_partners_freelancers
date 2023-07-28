@@ -38,6 +38,10 @@ export default {
       validator: (prop) => Object.values(sizes).includes(prop),
       default: SIZE_MD,
     },
+    block: {
+      type: Boolean,
+      default: false
+    },
     view: {
       type: String,
       validator: (prop) => Object.values(views).includes(prop),
@@ -49,7 +53,8 @@ export default {
       return [
       `button--view-${this.view}`,
       `button--size-${this.size}`,
-      ].join(' ')
+      this.block ? `button--block` : null
+      ].filter((item) => item).join(' ')
     },
     component () {
       if (this.href) return 'a'
@@ -82,6 +87,11 @@ export default {
   min-width: 150px;
   font-size: 18px;
   line-height: 1em;
+}
+
+.button--block {
+  width: 100%;
+  display: flex;
 }
 
 .button--size-md {

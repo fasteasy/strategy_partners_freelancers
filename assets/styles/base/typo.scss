@@ -8,6 +8,7 @@ body {
 .text--title {
   @include at-desktop {
     font-size: 40px;
+    line-height: 1.2em;
   }
   @include at-mobile {
     font-size: 22px;

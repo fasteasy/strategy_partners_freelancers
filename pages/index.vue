@@ -1,13 +1,6 @@
 <template>
   <div>
     <the-hero />
+    <the-preface />
   </div>
 </template>
-
-<script>
-export default {
-  mounted () {
-    console.log(this.$viewport)
-  }
-}
-</script>
