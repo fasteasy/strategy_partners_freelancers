@@ -87,7 +87,7 @@ export default {
   }
 }
 .features__footer {
-  margin: 80px;
+  margin-top: 80px;
   text-align: center
 }
 .features__footer-title {
