@@ -3,6 +3,6 @@
     <the-hero />
     <the-preface />
     <v-divider />
-    <br><br><br><br><br>
+    <the-features />
   </div>
 </template>
