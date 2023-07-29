@@ -9,12 +9,13 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: $font-normal;
   font-weight: 300;
+  color: $color-content;
 }
 
 .text--title {
   font-family: $font-special;
   @include at-desktop {
-    font-size: 4.8rem;
+    font-size: 4.43rem;
     line-height: 5.6rem;
     max-width: 100rem;
   }
@@ -26,8 +27,8 @@ body {
 .text--subtitle {
   font-family: $font-special;
   @include at-desktop {
-    font-size: 4em;
-    line-height: 1.125em;
+    font-size: 3.45rem;
+    line-height: 1.25em;
   }
   @include at-mobile {
     font-size: 22px;
@@ -37,6 +38,13 @@ body {
 .text--content {
   @include at-desktop {
     font-size: 24px;
-    line-height: 1.8em;
+    line-height: 36px;
   }
+  & + & {
+    margin-top: 16px;
+  }
+}
+
+.text--gradient {
+  @include text-gradient
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="join-call">
-        <h3 class="join-call__title">
+        <h3 class="join-call__title text--subtitle">
           Присоединяйтесь к&nbsp;программе Strategy Experts!
         </h3>
         <div class="join-call__button">
@@ -14,7 +14,7 @@
   text-align: center
 }
 .join-call__title {
-  max-width: 500px;
+  max-width: 555px;
   margin-left: auto;
   margin-right: auto;
 }

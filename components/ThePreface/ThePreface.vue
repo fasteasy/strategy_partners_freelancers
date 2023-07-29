@@ -3,7 +3,7 @@
     <v-container class="preface__inner">
       <the-preface-image class="preface__image" loading="lazy" />
       <div class="preface__content">
-        <h2 class="text--title preface__title">
+        <h2 class="text--title preface__title text--gradient">
           Уникальные возможности для талантливых специалистов
         </h2>
         <div class="preface__text">
