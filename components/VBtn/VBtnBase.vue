@@ -1,28 +1,28 @@
 <template>
   <component
-    class="button"
-    :class="classList"
     :is="component"
     v-bind="$attrs"
+    :disabled="disabled"
     @click.native="($event) => $emit('click', $event)"
+    :class="classList"
   >
-    <slot></slot>
+    <div class="button__text">
+      <slot></slot>
+    </div>
   </component>
-
 </template>
 
 <script>
-export const VIEW_PRIMARY = 'primary'
-export const VIEW_OUTLINE = 'outline'
-
-export const SIZE_MD = 'md'
-export const SIZE_LG = 'lg'
-
-const views = { VIEW_PRIMARY, VIEW_OUTLINE }
-const sizes = { SIZE_MD, SIZE_LG }
+const SIZE_MD = 'md'
+const SIZE_LG = 'lg'
+const sizes = { SIZE_LG, SIZE_MD }
 
 export default {
   props: {
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     tag: {
       type: String,
       default: 'button'
@@ -33,39 +33,43 @@ export default {
     href: {
       type: String
     },
+    block: {
+      type: Boolean,
+      default: false,
+    },
     size: {
       type: String,
       validator: (prop) => Object.values(sizes).includes(prop),
       default: SIZE_MD,
     },
-    block: {
-      type: Boolean,
-      default: false
-    },
-    view: {
-      type: String,
-      validator: (prop) => Object.values(views).includes(prop),
-      default: VIEW_PRIMARY
-    }
   },
   computed: {
-    classList () {
-      return [
-      `button--view-${this.view}`,
-      `button--size-${this.size}`,
-      this.block ? `button--block` : null
-      ].filter((item) => item).join(' ')
-    },
     component () {
       if (this.href) return 'a'
       if (this.to) return 'nuxt-link'
       return this.tag
+    },
+    classList () {
+      return [
+        'button',
+        this.block ? 'button--block' : '',
+        this.disabled ? 'button--disabled' : '',
+        `button--size-${this.size}`,
+      ].filter((item) => item).join(' ')
     }
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+$sizes: (
+  lg: (
+    height: 60px
+  ),
+  md: (
+    height: 40px
+  )
+);
 .button {
   -webkit-appearance: none;
   border: none;
@@ -87,29 +91,21 @@ export default {
   font-size: 18px;
   line-height: 1em;
 }
-
 .button--block {
   width: 100%;
   display: flex;
 }
-
-.button--size-md {
-  height: 40px;
-  border-radius: 20px;
+.button--disabled {
+  pointer-events: none;
+  opacity: 0.5;
 }
 
-.button--size-lg {
-  height: 60px;
-  border-radius: 30px;
+@each $key, $size in $sizes {
+  .button--size-#{$key} {
+    $height: map-get($size, height);
+    height: $height;
+    border-radius: $height/2;
+  }
 }
 
-.button--view-primary {
-  color: #fff;
-  font-weight: 300;
-  background: linear-gradient(#0EBDAD, #19A0FA);
-}
-
-.button--view-outline {
-  border: 1px solid
-}
 </style>
