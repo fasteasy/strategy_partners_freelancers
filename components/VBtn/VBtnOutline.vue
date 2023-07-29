@@ -19,7 +19,8 @@
 
 .button--outline:hover {
   background: $background-secondary;
-  color: #fff
+  color: #fff;
+  border-color: $color-blue
 }
 
 .button--outline:not(:hover) {
