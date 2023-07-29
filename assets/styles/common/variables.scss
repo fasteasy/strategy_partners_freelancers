@@ -1,1 +1,12 @@
 $background-primary: linear-gradient(45deg, #E1F3FF, #C5FBE8);
+$font-normal: 'MADE Evolve Sans';
+$font-special: 'Idealist Sans';
+
+$color-blue: #23C2D4;
+$color-green: #0ebead;
+
+@mixin color-text {
+  background: linear-gradient(90deg, $color-blue, $color-green);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

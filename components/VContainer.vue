@@ -6,14 +6,12 @@
 
 <style scoped lang="scss">
 .container {
-  margin-left: var(--gap);
-  margin-right: var(--gap);
-
-  @include at-desktop-wide {
-    width: 1296px;
-    margin-left: auto;
-    margin-right: auto;
-
+  max-width: 131rem;
+  margin-left: auto;
+  margin-right: auto;
+  @include at-mobile {
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 }
 </style>

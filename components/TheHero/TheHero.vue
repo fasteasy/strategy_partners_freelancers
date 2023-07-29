@@ -35,10 +35,14 @@
 }
 
 .hero__heading {
-  max-width: 634px;
+  max-width: 684px;
   @media (--mobile) {
     color: orange
   }
+}
+
+.hero__title {
+  text-shadow: 1px 1px 14px #fff;
 }
 
 .hero__button {

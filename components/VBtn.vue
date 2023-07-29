@@ -82,7 +82,6 @@ export default {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-family: var(--font-special);
   padding: 0 20px;
   min-width: 150px;
   font-size: 18px;

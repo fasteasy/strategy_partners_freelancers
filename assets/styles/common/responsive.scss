@@ -1,23 +1,23 @@
 @mixin at-mobile {
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 992px) {
     @content
   }
 }
 
 @mixin at-desktop {
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 993px) {
     @content
   }
 }
 
 @mixin at-desktop-small {
-  @media screen and (min-width: 1024px) and (max-width: 1365px) {
+  @media screen and (min-width: 993px) and (max-width: 1419px) {
     @content
   }
 }
 
 @mixin at-desktop-wide {
-  @media screen and (min-width: 1366px) {
+  @media screen and (min-width: 1420px) {
     @content
   }
 }
