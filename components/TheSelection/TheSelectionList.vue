@@ -9,7 +9,7 @@
       <div class="selection-list__item-inner">
         <img :src="item.image" loading="lazy" class="selection-list__item-image" />
         <h3 class="selection-list__item-title text--subtitle" v-html="item.title" />
-        <div class="selection-list__item-text" v-html="item.text" />
+        <div class="selection-list__item-text text--content" v-html="item.text" />
       </div>
     </li>
   </ul>
@@ -93,7 +93,6 @@ export default {
 
 .selection-list__item-text {
   @include at-desktop {
-    line-height: 36px;
     padding-right: 90px;
   }
 }

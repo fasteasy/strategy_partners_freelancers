@@ -6,7 +6,7 @@
       class="features-list__item"
     >
       <img :src="item.image" class="features-list__item-image">
-      <div class="features-list__item-text" v-html="item.text" />
+      <div class="features-list__item-text text--content" v-html="item.text" />
     </li>
   </ul>
 </template>
@@ -26,7 +26,7 @@ export default {
   @include at-desktop {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 24px
+    grid-gap: 88px 24px;
   }
 }
 
