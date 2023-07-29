@@ -6,9 +6,7 @@
     @click.native="($event) => $emit('click', $event)"
     :class="classList"
   >
-    <div class="button__text">
-      <slot></slot>
-    </div>
+    <slot />
   </component>
 </template>
 

@@ -1,57 +1,28 @@
 <template>
   <v-btn-base
     v-bind="$attrs"
-    :class="classList"
     v-on="$listeners"
+    class="button--outline"
   >
-    <span class="button__text text--gradiend">
+    <span class="button-outline-text">
       <slot></slot>
     </span>
   </v-btn-base>
 </template>
 
-<script>
-const SIZE_MD = 'md'
-const SIZE_LG = 'lg'
-const sizes = { SIZE_LG, SIZE_MD }
-
-export default {
-  props: {
-    size: {
-      type: String,
-      validator: (prop) => Object.values(sizes).includes(prop),
-      default: SIZE_MD,
-    },
-  },
-  computed: {
-    classList () {
-      return [
-        `button--size-${this.size}`,
-        `button--outline`
-      ]
-    }
-  }
-}
-</script>
-
 <style lang="scss" scoped>
-$sizes: (
-  lg: (
-    height: 60px
-  ),
-  md: (
-    height: 40px
-  )
-);
-
 .button--outline {
   background: #fff;
   border: 1px solid;
-  @each $key, $size in $sizes {
-    &--#{$key} {
-      color: green;
-      // height: map-get($size, height)
-    }
-  }
+  color: $color-blue;
+}
+
+.button--outline:hover {
+  background: $background-secondary;
+  color: #fff
+}
+
+.button--outline:not(:hover) {
+  @include text-gradient;
 }
 </style>
