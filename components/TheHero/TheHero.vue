@@ -1,6 +1,7 @@
 <template>
   <section class="hero">
-    <v-container>
+    <the-hero-background class="hero__background" />
+    <v-container class="hero__inner">
       <bread-crumbs class="hero__nav">
         Root / Here
       </bread-crumbs>
@@ -18,11 +19,21 @@
 
 <style scoped lang="scss">
 .hero {
+  position: relative;
   background: #eee;
   @include at-desktop {
     padding: 42px 0 104px
   }
 }
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__nav {
+  margin-bottom: 100px;
+}
+
 .hero__heading {
   max-width: 634px;
   @media (--mobile) {
@@ -32,7 +43,7 @@
 
 .hero__button {
   @include at-desktop {
-    margin-top: 50px;
+    margin-top: 40px;
     max-width: 320px;
   }
 }
