@@ -10,7 +10,7 @@
           Мы приглашаем вас принять участие в&nbsp;уникальных проектах Strategy Partners
         </h1>
         <div class="hero__button">
-          <v-btn block>Регистрация</v-btn>
+          <registration-button block>Регистрация</registration-button>
         </div>
       </div>
     </v-container>

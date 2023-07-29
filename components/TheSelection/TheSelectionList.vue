@@ -68,7 +68,7 @@ export default {
     top: 250px;
     left: -20%;
     width: 100%;
-    height: 100%;
+    bottom: 0;
     background-size: auto;
     background-position: 0 0;
     background-repeat: no-repeat;

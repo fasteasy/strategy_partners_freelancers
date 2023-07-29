@@ -9,15 +9,6 @@
 </template>
 
 <style lang="scss" scoped>
-$sizes: (
-  lg: (
-    height: 60px
-  ),
-  md: (
-    height: 40px
-  )
-);
-
 .button--fill {
   color: #fff;
   background: $background-secondary;

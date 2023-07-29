@@ -2,7 +2,7 @@
   <v-section title="Почему нас выбирают" class="features">
     <v-container>
       <the-features-list :items="items" />
-      <join-button class="features__footer" />
+      <join-block class="features__footer" />
     </v-container>
   </v-section>
 </template>

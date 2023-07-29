@@ -18,7 +18,7 @@
           </p>
         </div>
         <div class="preface__button">
-          <v-btn size="lg" view="outline" block>Регистрация</v-btn>
+          <registration-button size="lg" view="outline" block>Регистрация</registration-button>
         </div>
       </div>
     </v-container>

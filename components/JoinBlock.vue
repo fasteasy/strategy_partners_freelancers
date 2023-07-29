@@ -4,7 +4,13 @@
           Присоединяйтесь к&nbsp;программе Strategy Experts!
         </h3>
         <div class="join-call__button">
-          <v-btn size="lg" view="outline" block>Регистрация</v-btn>
+          <registration-button
+            size="lg"
+            view="outline"
+            block
+          >
+            Регистрация
+          </registration-button>
         </div>
       </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div class="join">
     <v-container>
-      <join-button />
+      <join-block />
     </v-container>
   </div>
 </template>

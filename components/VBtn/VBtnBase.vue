@@ -102,7 +102,7 @@ $sizes: (
   .button--size-#{$key} {
     $height: map-get($size, height);
     height: $height;
-    border-radius: $height/2;
+    border-radius: calc($height / 2);
   }
 }
 

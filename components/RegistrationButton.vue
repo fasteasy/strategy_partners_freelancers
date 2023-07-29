@@ -1,0 +1,9 @@
+<template>
+  <v-btn
+    :href="$d.registrationURL"
+    v-bind="$attrs"
+    v-on="$listeners"
+  >
+    <slot></slot>
+  </v-btn>
+</template>
