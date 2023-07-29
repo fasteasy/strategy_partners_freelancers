@@ -9,7 +9,7 @@
 </template>
 
 <style lang="scss" scoped>
-.button--fill {
+.button.button--fill {
   color: #fff;
   background: $background-secondary;
   &:hover {

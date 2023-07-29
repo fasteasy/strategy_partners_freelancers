@@ -20,7 +20,6 @@
 <style scoped lang="scss">
 .hero {
   position: relative;
-  background: #eee;
   @include at-desktop {
     padding: 42px 0 104px
   }
