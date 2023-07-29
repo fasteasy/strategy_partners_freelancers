@@ -7,7 +7,7 @@ body {
 .text--title {
   @include at-desktop {
     font-size: 40px;
-    line-height: 1.2em;
+    line-height: 1.25em;
   }
   @include at-mobile {
     font-size: 22px;
@@ -17,6 +17,7 @@ body {
 .text--subtitle {
   @include at-desktop {
     font-size: 30px;
+    line-height: 1.33em;
   }
   @include at-mobile {
     font-size: 22px;

@@ -1,7 +1,11 @@
 <template>
   <ul class="breadcrumbs">
-    <li v-for="item in items" :key="item.label">
-      <a :href="item.url">{{ item.label }}</a>
+    <li v-for="item in items" :key="item.label" class="breadcrumbs__item">
+      <component
+        :is="item.url ? 'a' : 'span'"
+        :href="item.url ? item.url : undefined"
+        :class="item.url ? 'breadcrumbs__item-link' : 'breadcrumbs__item-text'"
+      >{{ item.label }}</component>
     </li>
   </ul>
 </template>
@@ -13,14 +17,14 @@ export default {
       return [
         {
           label: 'Главная',
-          url: '/'
+          url: '/',
         },
         {
           label: 'Карьера',
-          url: '/career'
+          url: '/career',
         },
         {
-          label: 'Фрилансерам'
+          label: 'Фрилансерам',
         }
       ]
     }
@@ -37,17 +41,25 @@ $gap: 12px;
   grid-gap: $gap;
   font-size: 16px;
   line-height: 20px;
-  & > * {
-    display: flex;
-    grid-gap: $gap;
-    &:before {
-      content: '/';
-      display: block;
-      font-size: 20px;
-    }
-    &:first-child:before {
-      display: none;
-    }
+}
+
+.breadcrumbs__item {
+  display: flex;
+  grid-gap: $gap;
+  &:before {
+    content: '/';
+    display: block;
+    font-size: 20px;
   }
+  &:first-child:before {
+    display: none;
+  }
+}
+
+.breadcrumbs__item-link {
+
+}
+.breadcrumbs__item-text {
+
 }
 </style>
