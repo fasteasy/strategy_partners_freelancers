@@ -5,14 +5,22 @@
       v-for="item, idx in items"
       :key="idx"
     >
-      <img :src="item.image" class="selection-list__item-image" />
-      <h3 class="selection-list__item-title text--subtitle" v-html="item.title" />
-      <div class="selection-list__item-text" v-html="item.text" />
+      <div class="selection-list__item-number" :style="{ backgroundImage: `url(${item.number})` }" />
+      <div class="selection-list__item-inner">
+        <img :src="item.image" loading="lazy" class="selection-list__item-image" />
+        <h3 class="selection-list__item-title text--subtitle" v-html="item.title" />
+        <div class="selection-list__item-text" v-html="item.text" />
+      </div>
     </li>
   </ul>
 </template>
 
 <script>
+const numbers = [
+  require('./img/1.svg'),
+  require('./img/2.svg'),
+  require('./img/3.svg')
+]
 export default {
   computed: {
     items () {
@@ -32,7 +40,10 @@ export default {
           title: 'Приступайте к&nbsp;работе в&nbsp;команде SP',
           text: 'Присоединяйтесь к&nbsp;команде профессионалов и&nbsp;начинайте решать уникальные задачи совместно с&nbsp;SP. Делитесь своим опытом с&nbsp;коллегами и&nbsp;добивайтесь новых высот в&nbsp;амбициозной компании. Мы&nbsp;вам всегда рады!'
         }
-      ]
+      ].map((item, idx) => ({
+        ...item,
+        number: numbers[idx]
+      }))
     }
   }
 }
@@ -45,6 +56,27 @@ export default {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 24px;
   }
+}
+
+.selection-list__item {
+  position: relative;
+}
+
+.selection-list__item-number {
+  @include at-desktop {
+    position: absolute;
+    top: 250px;
+    left: -20%;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+  }
+}
+
+.selection-list__item-inner {
+  position: relative;
 }
 
 .selection-list__item-image {
@@ -61,7 +93,8 @@ export default {
 
 .selection-list__item-text {
   @include at-desktop {
-    padding-right: 100px;
+    line-height: 36px;
+    padding-right: 90px;
   }
 }
 </style>

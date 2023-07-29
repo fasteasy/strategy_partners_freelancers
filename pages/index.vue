@@ -6,5 +6,6 @@
     <the-features id="features" />
     <v-divider />
     <the-selection id="selection" />
+    <the-join id="join" />
   </div>
 </template>

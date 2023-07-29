@@ -1,21 +1,10 @@
 <template>
-  <section class="features">
+  <v-section title="Почему нас выбирают" class="features">
     <v-container>
-      <h2 class="features__title text--subtitle">
-        Почему нас выбирают
-      </h2>
       <the-features-list :items="items" />
-
-      <div class="features__footer">
-        <h3 class="features__footer-title">
-          Присоединяйтесь к&nbsp;программе Strategy Experts!
-        </h3>
-        <div class="features__footer-button">
-          <v-btn view="outline" block>Регистрация</v-btn>
-        </div>
-      </div>
+      <join-button class="features__footer" />
     </v-container>
-  </section>
+  </v-section>
 </template>
 
 <script>
@@ -77,28 +66,9 @@ export default {
 
 <style lang="scss" scoped>
 .features {
-  @include at-desktop {
-    padding: 80px 0;
-  }
-}
-.features__title {
-  @include at-desktop {
-    margin-bottom: 80px;
-  }
 }
 .features__footer {
   margin-top: 80px;
-  text-align: center
 }
-.features__footer-title {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.features__footer-button {
-  margin-top: 30px;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 </style>
