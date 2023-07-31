@@ -31,7 +31,8 @@
     padding: 60px 0 100px;
   }
   @include at-mobile {
-    padding: 20px 0 40px
+    overflow: hidden;
+    padding: 20px 0 40px;
   }
 }
 .preface__inner {

@@ -99,8 +99,8 @@ export default {
   }
   @include at-mobile {
     margin-bottom: 40px;
-    // width: 48px;
-    // height: 48px;
+    width: 54px;
+    height: 54px;
   }
 }
 
