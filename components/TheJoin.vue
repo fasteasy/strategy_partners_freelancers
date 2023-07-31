@@ -12,5 +12,9 @@
   @include at-desktop {
     padding: 94px 0 74px;
   }
+  @include at-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 </style>

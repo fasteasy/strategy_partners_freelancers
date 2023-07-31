@@ -33,11 +33,18 @@ export default {
     padding-top: 80px;
     padding-bottom: 80px;
   }
+  @include at-mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 
 .section__title {
   @include at-desktop {
     margin-bottom: 80px;
+  }
+  @include at-mobile {
+    margin-bottom: 40px;
   }
 }
 </style>

@@ -40,31 +40,41 @@ export default {
 
 <style lang="scss" scoped>
 $gap: 12px;
+$gap-small: 8px;
 .breadcrumbs {
   display: flex;
   align-items: center;
-  grid-gap: $gap;
   @include at-desktop {
     font-size: 1.6em;
     line-height: 2.4rem;
+    grid-gap: $gap;
+  }
+  @include at-mobile {
+    grid-gap: $gap-small;
   }
 }
 
 .breadcrumbs__item {
   display: flex;
-  grid-gap: $gap;
+  align-items: center;
   &:before {
     color: #505354;
     opacity: 0.7;
     content: '/';
     display: block;
-    font-size: 20px;
+    font-size: 1.5em;
   }
   &:first-child:before {
     display: none;
   }
   &.active {
     opacity: 1;
+  }
+  @include at-desktop {
+    grid-gap: $gap;
+  }
+  @include at-mobile {
+    grid-gap: $gap-small;
   }
 }
 

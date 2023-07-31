@@ -30,13 +30,18 @@
   @include at-desktop {
     padding: 60px 0 100px;
   }
+  @include at-mobile {
+    padding: 20px 0 40px
+  }
 }
 .preface__inner {
   position: relative;
 }
 .preface__content {
-  width: 526px;
-  margin-left: auto;
+  @include at-desktop {
+    width: 526px;
+    margin-left: auto;
+  }
 }
 .preface__title {
   margin-bottom: 1.1em
@@ -62,6 +67,9 @@
   @include at-desktop {
     max-width: 320px;
     margin-top: 46px;
+  }
+  @include at-mobile {
+    margin-top: 40px;
   }
 }
 </style>

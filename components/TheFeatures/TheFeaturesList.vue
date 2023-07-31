@@ -31,11 +31,18 @@ export default {
 }
 
 .features-list__item {
+  display: flex;
   @include at-desktop {
-    display: flex;
     text-align: center;
     flex-direction: column;
     align-items: center;
+  }
+  @include at-mobile {
+    grid-gap: 12px;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -45,6 +52,10 @@ export default {
     width: 76px;
     height: 76px;
     margin-bottom: 16px;
+  }
+  @include at-mobile {
+    width: 48px;
+    height: 48px;
   }
 }
 

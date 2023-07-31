@@ -13,6 +13,10 @@
   background-size: auto 100%;
   background-position: 150% 50%;
   background-repeat: no-repeat;
+  @include at-mobile {
+    background-position: -35% 100%;
+    opacity: 0.55;
+  }
 }
 
 .hero-background:after {

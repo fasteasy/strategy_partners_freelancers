@@ -15,15 +15,34 @@
   background: #fff;
   border: 1px solid;
   color: $color-blue;
+  transition: 0.25s background;
 }
+
 
 .button--outline:hover {
-  background: $background-secondary;
+  border-color: transparent;
   color: #fff;
-  border-color: $color-blue
+  background: $background-secondary;
 }
 
-.button--outline:not(:hover) {
-  @include text-gradient;
-}
+
+// .button--outline {
+//   background: #fff !important;
+//   border: 1px solid;
+//   color: $color-blue;
+// }
+
+// .button--outline:hover {
+//   background: $background-secondary;
+//   color: #fff;
+//   border-color: $color-blue
+// }
+
+// .button--outline:not(:hover) {
+//   @include text-gradient;
+// }
+
+// .button-outline-text {
+
+// }
 </style>

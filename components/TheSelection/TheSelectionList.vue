@@ -8,7 +8,7 @@
       <div class="selection-list__item-number" :style="{ backgroundImage: `url(${item.number})` }" />
       <div class="selection-list__item-inner">
         <img :src="item.image" loading="lazy" class="selection-list__item-image" />
-        <h3 class="selection-list__item-title text--subtitle" v-html="item.title" />
+        <h3 class="selection-list__item-title text--subtitle text--gradient" v-html="item.title" />
         <div class="selection-list__item-text text--content" v-html="item.text" />
       </div>
     </li>
@@ -60,18 +60,32 @@ export default {
 
 .selection-list__item {
   position: relative;
+  @include at-mobile {
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .selection-list__item-number {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-size: auto;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
   @include at-desktop {
-    position: absolute;
     top: 250px;
     left: -20%;
-    width: 100%;
-    bottom: 0;
-    background-size: auto;
-    background-position: 0 0;
-    background-repeat: no-repeat;
+  }
+  @include at-mobile {
+    top: 32%;
+    left: -5%;
+    background-size: contain;
+    width: 40%;
+    height: 170px;
   }
 }
 
@@ -83,10 +97,18 @@ export default {
   @include at-desktop {
     margin-bottom: 40px;
   }
+  @include at-mobile {
+    margin-bottom: 40px;
+    // width: 48px;
+    // height: 48px;
+  }
 }
 
 .selection-list__item-title {
   @include at-desktop {
+    margin-bottom: 20px;
+  }
+  @include at-mobile {
     margin-bottom: 20px;
   }
 }

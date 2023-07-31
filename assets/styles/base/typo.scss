@@ -39,9 +39,16 @@ body {
   @include at-desktop {
     font-size: 24px;
     line-height: 36px;
+    & + & {
+      margin-top: 16px;
+    }
   }
-  & + & {
-    margin-top: 16px;
+  @include at-mobile {
+    font-size: 18px;
+    line-height: 24px;
+    & + & {
+      margin-top: 16px;
+    }
   }
 }
 

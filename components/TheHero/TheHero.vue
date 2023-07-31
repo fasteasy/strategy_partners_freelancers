@@ -23,6 +23,9 @@
   @include at-desktop {
     padding: 42px 0 104px
   }
+  @include at-mobile {
+    padding: 28px 0 40px
+  }
 }
 
 .hero__inner {
@@ -30,14 +33,16 @@
 }
 
 .hero__nav {
-  margin-bottom: 100px;
+  @include at-desktop {
+    margin-bottom: 100px;
+  }
+  @include at-mobile {
+    margin-bottom: 80px;
+  }
 }
 
 .hero__heading {
   max-width: 684px;
-  @media (--mobile) {
-    color: orange
-  }
 }
 
 .hero__title {
@@ -48,6 +53,9 @@
   @include at-desktop {
     margin-top: 40px;
     max-width: 320px;
+  }
+  @include at-mobile {
+    margin-top: 32px;
   }
 }
 </style>
