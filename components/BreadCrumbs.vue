@@ -40,7 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 $gap: 12px;
-$gap-small: 8px;
+$gap-small: 12px;
 .breadcrumbs {
   display: flex;
   align-items: center;
@@ -50,6 +50,8 @@ $gap-small: 8px;
     grid-gap: $gap;
   }
   @include at-mobile {
+    font-size: 1.5em;
+    line-height: 2rem;
     grid-gap: $gap-small;
   }
 }

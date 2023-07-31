@@ -47,13 +47,18 @@
   margin-bottom: 1.1em
 }
 .preface__image {
-  display: block;
-  max-width: 100%;
   @include at-desktop {
     position: absolute;
     top: -11%;
     left: -8%;
     width: 70%;
+    max-width: 100%;
+  }
+  @include at-mobile {
+    position: relative;
+    left: 50%;
+    width: 123%;
+    transform: translateX(-50%)
   }
 }
 .preface__text {
