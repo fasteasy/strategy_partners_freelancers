@@ -1,8 +1,8 @@
 <template>
-  <section class="section">
+  <section class="section section_white">
     <div class="section__title" v-if="title || $scopedSlots.title">
       <v-container>
-        <component :is="titleTag" class="section__title text--subtitle">
+        <component :is="titleTag" class="text--title">
           <slot name="title">
             <span v-html="title" />
           </slot>
@@ -29,10 +29,6 @@ export default {
 
 <style lang="scss" scoped>
 .section {
-  @include at-desktop {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
   @include at-mobile {
     padding-top: 40px;
     padding-bottom: 40px;
@@ -40,11 +36,11 @@ export default {
 }
 
 .section__title {
+  @include at-mobile {
+    margin-bottom: 60px;
+  }
   @include at-desktop {
     margin-bottom: 80px;
-  }
-  @include at-mobile {
-    margin-bottom: 40px;
   }
 }
 </style>

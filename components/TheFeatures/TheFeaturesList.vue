@@ -1,12 +1,16 @@
 <template>
-  <ul class="features-list">
+  <ul class="choise-block__wrap">
     <li
       v-for="item, idx in items"
       :key="idx"
-      class="features-list__item"
+      class="choise-block__column"
     >
-      <img :src="item.image" class="features-list__item-image">
-      <div class="features-list__item-text text--content" v-html="item.text" />
+      <div class="choise-block__item">
+        <div class="choise-block__icon">
+          <img :src="item.image" class="choise-block__image">
+        </div>
+        <div class="choise-block__content" v-html="item.text" />
+      </div>
     </li>
   </ul>
 </template>
@@ -22,44 +26,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.features-list {
-  @include at-desktop {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 88px 24px;
-  }
-}
-
-.features-list__item {
-  display: flex;
-  @include at-desktop {
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-  }
-  @include at-mobile {
-    grid-gap: 12px;
-    margin-bottom: 40px;
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.features-list__item-image {
-  @include at-desktop {
-    display: block;
-    width: 76px;
-    height: 76px;
-    margin-bottom: 16px;
-  }
-  @include at-mobile {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.features-list__item-text {
-
-}
 </style>

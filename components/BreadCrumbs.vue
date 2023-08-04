@@ -1,19 +1,24 @@
 <template>
-  <ul class="breadcrumbs">
-    <li
-      v-for="item in items" :key="item.label"
-      class="breadcrumbs__item"
-      :class="item.url ? 'active' : null"
+  <nav aria-label="breacrumbs-main">
+    <ol
+      class="breadcrumb"
     >
-      <component
-        :is="item.url ? 'a' : 'span'"
-        :href="item.url ? item.url : undefined"
-        :class="item.url ? 'breadcrumbs__item-link' : 'breadcrumbs__item-text'"
+      <li
+        class="breadcrumb-item"
+        :class="item.url ? 'active' : null"
+        v-for="item in items"
+        :key="item.label"
+        :aria-current="item.label"
       >
-        {{ item.label }}
-      </component>
-    </li>
-  </ul>
+        <a :href="item.url" class="breadcrumb-link" v-if="item.url">
+          {{ item.label }}
+        </a>
+        <template v-else>
+          {{ item.label }}
+        </template>
+      </li>
+    </ol>
+  </nav>
 </template>
 
 <script>
@@ -23,11 +28,11 @@ export default {
       return [
         {
           label: 'Главная',
-          url: '/',
+          url: 'https://strategy.ru/',
         },
         {
           label: 'Карьера',
-          url: '/career',
+          url: 'https://strategy.ru/career',
         },
         {
           label: 'Фрилансерам',
@@ -39,56 +44,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$gap: 12px;
-$gap-small: 12px;
-.breadcrumbs {
-  display: flex;
-  align-items: center;
-  @include at-desktop {
-    font-size: 1.6em;
-    line-height: 2.4rem;
-    grid-gap: $gap;
-  }
-  @include at-mobile {
-    font-size: 1.5em;
-    line-height: 2rem;
-    grid-gap: $gap-small;
-  }
-}
-
-.breadcrumbs__item {
-  display: flex;
-  align-items: center;
-  &:before {
-    color: #505354;
-    opacity: 0.7;
-    content: '/';
-    display: block;
-    font-size: 1.5em;
-  }
-  &:first-child:before {
-    display: none;
-  }
-  &.active {
-    opacity: 1;
-  }
-  @include at-desktop {
-    grid-gap: $gap;
-  }
-  @include at-mobile {
-    grid-gap: $gap-small;
-  }
-}
-
-.breadcrumbs__item-link {
-  color: $color-blue;
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.breadcrumbs__item-text {
-  color: #505354;
-  opacity: 0.7;
-}
 </style>

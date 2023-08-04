@@ -4,8 +4,9 @@
     <the-preface id="preface" />
     <v-divider />
     <the-features id="features" />
+    <join-block view="white" id="join" />
     <v-divider />
     <the-selection id="selection" />
-    <the-join id="join" />
+    <join-block view="green" id="join" />
   </div>
 </template>

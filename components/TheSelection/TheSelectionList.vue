@@ -91,6 +91,9 @@ export default {
 
 .selection-list__item-inner {
   position: relative;
+  @include at-mobile {
+    max-width: 375px;
+  }
 }
 
 .selection-list__item-image {
@@ -116,6 +119,9 @@ export default {
 .selection-list__item-text {
   @include at-desktop {
     padding-right: 90px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1280px) {
+    padding-right: 40px;
   }
 }
 </style>

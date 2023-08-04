@@ -1,33 +1,58 @@
 <template>
-  <div class="join-call">
-        <h3 class="join-call__title text--subtitle">
-          Присоединяйтесь к&nbsp;программе Strategy Experts!
-        </h3>
-        <div class="join-call__button">
-          <registration-button
-            size="lg"
-            view="outline"
-            block
-          >
-            Регистрация
-          </registration-button>
+  <v-section class="news-section" :class="classList">
+    <v-container>
+      <div class="carera-response__block">
+        <div class="carera-response__block-title h2">
+          Готовы с нами работать?
+          <br>
+          Присоединяйтесь!
+        </div>
+        <div class="center btn-border-green__button" style="max-width: 320px; margin-left: auto; margin-right: auto">
+          <VBtnRegistration
+            style="width: 100%"
+            :view="view === VIEW_GREEN ? 'green' : 'space'"
+          />
         </div>
       </div>
+    </v-container>
+  </v-section>
 </template>
 
+<script>
+export const VIEW_GREEN = 'green'
+export const VIEW_WHITE = 'white'
+const views = { VIEW_GREEN, VIEW_WHITE }
+
+export default {
+  props: {
+    view: {
+      type: String,
+      validator: (prop) => Object.values(views).includes(prop),
+      required: true
+    }
+  },
+  data () {
+    return {
+      VIEW_GREEN,
+      VIEW_WHITE,
+    }
+  },
+  computed: {
+    classList () {
+      return [
+        `news-section--view-${this.view}`
+      ]
+    }
+  }
+}
+</script>
+
 <style lang="scss" scoped>
-.join-call {
-  text-align: center
+.news-section--view-green {
+  background: $background-primary;
 }
-.join-call__title {
-  max-width: 555px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.join-call__button {
-  margin-top: 30px;
-  max-width: 320px;
-  margin-left: auto;
-  margin-right: auto;
+
+.news-section--view--white {
+  background: #fff;
 }
 </style>

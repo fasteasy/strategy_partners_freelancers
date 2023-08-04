@@ -2,15 +2,13 @@
   <section class="hero">
     <the-hero-background class="hero__background" />
     <v-container class="hero__inner">
-      <bread-crumbs class="hero__nav">
-        Root / Here
-      </bread-crumbs>
+      <bread-crumbs class="hero__nav" />
       <div class="hero__heading">
         <h1 class="text--title hero__title">
           Мы приглашаем вас принять участие в&nbsp;уникальных проектах Strategy Partners
         </h1>
         <div class="hero__button">
-          <registration-button block>Регистрация</registration-button>
+          <VBtnRegistration block view="green" />
         </div>
       </div>
     </v-container>
@@ -30,6 +28,7 @@
 
 .hero__inner {
   position: relative;
+  z-index: 2;
 }
 
 .hero__nav {
@@ -43,6 +42,9 @@
 
 .hero__heading {
   max-width: 684px;
+  @include at-mobile {
+    max-width: 375px;
+  }
 }
 
 .hero__title {
